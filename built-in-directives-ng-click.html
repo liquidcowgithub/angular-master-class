@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞ 
+
+    Hey there, 
+
+    Feel free to have a look around. 
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+    
+    -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngClick</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
+    <title>Built-In Directives: ngRepeat</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        pre {
+            white-space: pre-line
+        }
+    </style>
 </head>
 
 <body class="container-fluid" ng-app="exampleModule">
@@ -20,51 +45,79 @@
             <h2>HTML</h2>
             <pre ng-non-bindable="">
                 <code>
-                    <xmp>
-                    <h3>Kitten Toggler</h3>
-                    <button class="btn" ng-click="$ctrl.toggleKitten()">Toggle Kitten</button>
-                    <div ng-if="$ctrl.showKitten">
-   /\_/\
-   >^.^<.---.
-  _'-`-'     )\
- (6--\ |--\ (`.`-.
-     --'  --'  ``-'
-                    </div>
-                    </xmp> 
+&lt;h3&gt;Rings Toggler&lt;/h3&gt;
+&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.toggleRings()&quot;&gt;Toggle Rings&lt;/button&gt;
+&lt;div ng-if=&quot;$ctrl.showRings&quot;&gt;
+  ,---.   ,---.   ,---.
+,'     `.'     `.'     `.
+|     ,-|-.   ,-|-.     |
+`.  ,' ,'. `.' ,'. `.  ,'
+  `-|-'   `-|-'   `-|-'
+    `.     ,',     ,'
+      `---'   `---'     
+&lt;/div&gt;
                 </code>
             </pre>
             <h2>JavaScript</h2>
             <pre>
                 <code>
-                    <script type="text/javascript" style="display: block;">
-                        var exampleModule = angular.module('exampleModule',[]);
-                        exampleModule.controller('exampleController', function() {
-                            var $ctrl = this;
+var exampleModule = angular.module('exampleModule',[]);
+exampleModule.controller('exampleController', function() {
+    var $ctrl = this;
 
-                            $ctrl.showKitten = false;
+    $ctrl.showRings = false;
 
-                            $ctrl.toggleKitten = function(){
-                                $ctrl.showKitten = !$ctrl.showKitten
-                            }
-                        });
-                    </script>
+    $ctrl.toggleRings = function(){
+        $ctrl.showRings = !$ctrl.showRings
+    }
+});
                 </code>
             </pre>
         </div>
         <div class="col-md-6">
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
-                <h3>Kitten Toggler</h3>
-                <button class="btn" ng-click="$ctrl.toggleKitten()">Toggle Kitten</button>
-                <div ng-if="$ctrl.showKitten">
-                    /\_/\ >^.^
-                    <.---. _ '-`-' )\ (6--\ |--\ (`.`-. -- '  --' ``- '
-                    </div>
+                <h3>Rings Toggler</h3>
+                <button class="btn" ng-click="$ctrl.toggleRings()">Toggle Rings</button>
+                <div ng-if="$ctrl.showRings" style="white-space: pre;">
+  ,---.   ,---.   ,---.
+,'     `.'     `.'     `.
+|     ,-|-.   ,-|-.     |
+`.  ,' ,'. `.' ,'. `.  ,'
+  `-|-'   `-|-'   `-|-'
+    `.     ,',     ,'
+      `---'   `---' 
+                </div>
             </pre>
         </div>
     </div>
 
 </body>
+
+<script type="text/javascript">
+    var exampleModule = angular.module('exampleModule',[]);
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
+
+        $ctrl.showRings = false;
+
+        $ctrl.toggleRings = function(){
+            $ctrl.showRings = !$ctrl.showRings
+        }
+    });
+</script>
+
+<!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 
 
 
