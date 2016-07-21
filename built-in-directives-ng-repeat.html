@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞ 
+
+    Hey there, 
+
+    Feel free to have a look around. 
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+    
+    -->
     <meta charset="utf-8">
     <title>Built-In Directives: ngRepeat</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-        pre,
-        xmp{
-            white-space: pre-line !important;
+        pre {
+            white-space: pre-line
         }
     </style>
 </head>
@@ -21,71 +39,78 @@
     <div class="row">
         <div class="col-md-6">
             <h2>HTML</h2>
-            <pre ng-non-bindable="">
-                <code>
-                    <xmp>
-                    <h3>Kittens & Reactions</h3>
-                    <div ng-repeat="kitten in $ctrl.kittens">
-                        {{kitten.name}} -> {{kitten.cuteness}}
-                    </div>
-                    </xmp> 
+            <div ng-non-bindable="">
+                <pre>
+                    <code>
+&lt;h3&gt;Athletes &amp; Countries&lt;/h3&gt;
+&lt;div ng-repeat=&quot;athlete in $ctrl.athletes&quot;&gt;
+    {{athlete.name}} -&gt; {{athlete.country}}
+&lt;/div&gt;
                 </code>
-            </pre>
+                </pre>
+            </div>
             <h2>JavaScript</h2>
             <pre>
                 <code>
 var exampleModule = angular.module('exampleModule',[]);
 exampleModule.controller('exampleController', function() {
 
-    var $ctrl = this;
+var $ctrl = this;
 
-    $ctrl.kittens = [{
-        name: "Mittens",
-        cuteness: "meh -_-"
-    },
-    {
-        name: "Snowball",
-        cuteness: ":D"
-    },
-    {
-        name: "Daisy",
-        cuteness: "(♥_♥)"
-    }];
-});
+ $ctrl.athletes = [{
+            name: "Usain Bolt",
+            country: "Jamaica"
+        },
+        {
+            name: "Michael Phelps",
+            country: "USA"
+        },
+        {
+            name: "Larisa Latynina",
+            country: "Soviet Union"
+        }];
                 </code>
             </pre>
         </div>
         <div class="col-md-6">
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
-                <h3>Kittens & Reactions</h3>
-                <div ng-repeat="kitten in $ctrl.kittens">
-                    {{kitten.name}} -> {{kitten.cuteness}}
+                <h3>Athletes & Countries</h3>
+                <div ng-repeat="athlete in $ctrl.athletes">
+                    {{athlete.name}} -> {{athlete.country}}
                 </div>
             </pre>
         </div>
     </div>
-
 </body>
-
 <script type="text/javascript">
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
 
-        $ctrl.kittens = [{
-            name: "Mittens",
-            cuteness: "meh -_-"
+        $ctrl.athletes = [{
+            name: "Usain Bolt",
+            country: "Jamaica"
         },{
-            name: "Snowball",
-            cuteness: ":D"
+            name: "Michael Phelps",
+            country: "USA"
         },
         {
-            name: "Daisy",
-            cuteness: "(♥_♥)"
+            name: "Larisa Latynina",
+            country: "Soviet Union"
         }];
     });
 </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
 
 
 </html>
