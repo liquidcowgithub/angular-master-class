@@ -21,8 +21,8 @@
     <meta charset="utf-8">
     <title>Built-In Directives: ngModel</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
     <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
         crossorigin="anonymous"></script>
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
@@ -34,20 +34,21 @@
     </style>
 </head>
 
-<body class="container-fluid" ng-app="exampleModule">
-    <h1>Built-In Directives: ngModel</h1>
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1>Built-In Directives: <span class="just-highlight">ngModel</span></h1>
+    <br /><br />
     <div class="row">
         <div class="col-md-6">
-            <h2>HTML</h2>
+            <h2><span class="just-highlight-blue">HTML</span></h2>
             <div ng-non-bindable="">
                 <pre>
                     <code>
 Fastest Man in the World: &lt;input ng-model=&quot;fastestMan&quot;&gt;
-&lt;h1&gt;{{fastestMan}} is the fastest man in the world!&lt;/h1&gt;
+&lt;h3&gt;{{fastestMan}}&lt;/h3&gt; is the fastest man in the world!
                 </code>
                 </pre>
             </div>
-            <h2>JavaScript</h2>
+            <h2><span class="just-highlight-blue">JavaScript</span></h2>
             <pre>
                 <code>
 var exampleModule = angular.module('exampleModule',[]);
@@ -60,7 +61,7 @@ exampleModule.controller('exampleController', function() {
             </pre>
         </div>
         <div class="col-md-6">
-            <h2>Outcome</h2>
+            <h2><span class="just-highlight-blue">Outcome</span></h2>
             <pre ng-controller="exampleController as $ctrl" ng-init="fastestMan='Yohan Blake'">
               Fastest Man in the World: <input ng-model="fastestMan">
               <h3>{{fastestMan}}</h3> is the fastest man in the world!

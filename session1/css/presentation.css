@@ -17,7 +17,8 @@ body {
 }
 .step {
     position: relative;
-    width: 1200px;
+    width: 1000px;
+    height: 700px;
     padding: 40px;
     margin: 0 auto;
     -webkit-box-sizing: border-box;
@@ -33,6 +34,15 @@ body {
 }
 .step:not(.active) {
     opacity: 0.3;
+}
+
+.step.iframe-step {
+  width: 1000px;
+  height: 700px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
 }
 
 .step .row {
@@ -95,6 +105,9 @@ ul {
 .just-highlight {
   color: #FFD966;
 }
+.just-highlight-blue {
+  color: #cacaca;
+}
 #five {
   text-align: center;
   font-size: 100pt;
@@ -119,14 +132,38 @@ color: #C86000;
   font-size: 140pt !important;
 }
 
-#eight li {
+.intro-slide li {
+  text-align: right;
   font-size: 30pt;
 }
 
-#eight img {
+.intro-slide li.smaller {
+  font-size: 18pt;
+  color:#9e9e9e;
+}
+
+.logo {
   width: 400px;
-    float: left;
+    position: absolute;
+    height: 461px;
+    left:-60px;
+    bottom: -185px;
+    z-index: 10;
+}
+
+.slogan {
+  width: 300px;
+    float: right;
     position: relative;
-    height: 400px;
-    margin-right: 100px;
+    height: 106px;
+    margin:0;
+    padding:0;
+}
+
+.iframe-content h1 {
+  font-size: 60pt;
+}
+
+.iframe-content h3 {
+  color:#FFD966;
 }
