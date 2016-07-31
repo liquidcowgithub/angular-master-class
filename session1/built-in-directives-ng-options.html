@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞
+
+    Hey there,
+
+    Feel free to have a look around.
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+
+    -->
+    <meta charset="utf-8">
+    <title>Built-In Directives: ngOptions</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        pre {
+            white-space: pre-line
+        }
+        .col-md-6 .just-highlight {
+          font-size: 40pt;
+        }
+    </style>
+</head>
+
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1>Built-In Directives: <span class="just-highlight">ngOptions</span></h1>
+    <br /><br />
+    <div class="row">
+        <div class="col-md-6">
+            <h2><span class="just-highlight-blue">HTML</span></h2>
+            <div ng-non-bindable="">
+                <pre>
+                    <code>
+&lt;p&gt;selected athlete is : {{selectedAthlete.name}}&lt;/p&gt;
+&lt;p&gt;total medals of selected athlete is :
+{{selectedAthlete.medals}} &lt;/p&gt;
+
+&lt;select ng-model=&quot;selectedAthlete&quot;
+ng-options=&quot;athlete.name for athlete in athletes&quot;&gt;
+&lt;/select&gt;
+                </code>
+                </pre>
+            </div>
+            <h2><span class="just-highlight-blue">JavaScript</span></h2>
+            <pre>
+                <code>
+var exampleModule = angular.module('exampleModule',[]);
+exampleModule.controller('exampleController', function() {
+  $scope.athletes = [
+    {name: 'Usain Bolt', medals: 30 },
+    { name: 'Michael Phelps', medals: 27 },
+    { name: 'Tom Daley', medals: 50 }
+  ];
+});
+                </code>
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <h2><span class="just-highlight-blue">Outcome</span></h2>
+            <pre ng-controller="exampleController as $ctrl">
+              <p>Selected athlete is : {{$ctrl.selectedAthlete.name}}</p>
+              <p>Total medals of selected athlete is : {{$ctrl.selectedAthlete.medals}} </p>
+              <select ng-model="$ctrl.selectedAthlete" ng-options="athlete.name for athlete in $ctrl.athletes">
+              </select>
+            </pre>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var exampleModule = angular.module('exampleModule',[]);
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
+
+        $ctrl.athletes = [{name: 'Usain Bolt', medals: 30 },{ name: 'Michael Phelps', medals: 27 },{ name: 'Tom Daley', medals: 50 }];
+
+        $ctrl.selectedAthlete = $ctrl.athletes[0];
+    });
+</script>
+
+<!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+</html>

@@ -37,87 +37,17 @@
 
   </div>
     <div id="two" class="step iframe-step" data-x="1500">
-        <iframe src="built-in-directives-ng-model.html" height="700" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        <iframe src="built-in-directives-ng-model.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="three" class="step" data-x="4000">
-        <h1>We <span class="just-highlight"><i class="fa fa-heart-o" aria-hidden="true"></i></span> AngularJS</h1>
+    <div id="three" class="step iframe-step" data-x="3000">
+        <iframe src="built-in-directives-ng-blur.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <!-- <div id="three" class="step" data-x="4000">
-        <h1>We <span class="just-highlight"><i class="fa fa-heart-o" aria-hidden="true"></i></span> AngularJS</h1>
-    </div> -->
-    <!-- <div id="two" class="step" data-x="2000">
-        <ul>
-          <li>
-            Importance of Performance
-          </li>
-          <li>
-            Colours in Web Design
-          </li>
-          <li>
-            Colours and Perceived Performance
-          </li>
-        </ul>
+    <div id="four" class="step iframe-step" data-x="4500">
+        <iframe src="built-in-directives-ng-change.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="three" class="step" data-x="4000">
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-line-chart"></i>
-          Importance of Performance
-        </li>
-      </ul>
+    <div id="five" class="step iframe-step" data-x="6000">
+        <iframe src="built-in-directives-ng-options.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="four" class="step" data-x="6000">
-        <ul>
-          <li>
-            <span class="highlight-point">47%</span> of people expect a web page to load in under two seconds
-          </li>
-          <li>
-            <br />
-          </li>
-          <li>
-            <span class="highlight-point">57%</span> of visitors will abandon a page that takes 3 or more seconds to load
-          </li>
-        </ul>
-    </div>
-    <div id="five" class="step" data-x="8000">
-        <div id="count">
-          0
-        </div>
-    </div>
-    <div id="six" class="step" data-x="10000">
-        <h1>100ms = 1%</h1>
-    </div>
-    <div id="seven" class="step" data-x="12000">
-        <h1>$100, 000, 000</h1>
-    </div>
-    <div id="eight" class="step" data-x="14000">
-        <img src="img/obama-logo.png" />
-        <ul>
-          <li>
-            Barack Obama’s campaign donations increased by <span class="highlight-point">14%</span> by decreasing page speeds from 5s to 2s
-          </li>
-          <li>
-            <br />
-          </li>
-          <li>
-            That’s <span class="highlight-point">$34, 000, 000</span> of additional contributions
-          </li>
-        </ul>
-    </div>
-    <div id="nine" class="step" data-x="16000">
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-paint-brush"></i>
-          Colours in Web Design
-        </li>
-      </ul>
-    </div>
-    <div id="ten" class="step" data-x="18000">
-        <h3><span class="just-highlight">Colour psychology</span> is the study of hues as a determinant of human behavior.
-          <span class="just-highlight">Color</span> influences perceptions that are not obvious, such as the taste of food.
-          <span class="just-highlight">Colors</span> can also enhance the effectiveness of placebos.</h3>
-    </div>
-    <div id="eleven" class="step" data-x="20000">
-        <h1>We <span class="just-highlight">feel</span> colour</h1>
-    </div> -->
 </div>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -126,12 +56,6 @@
 <script>
 $(function() {
 $('#impress').jmpress();
-$('#impress').jmpress( 'setActive', function( slide, eventData ) {
-  if($(slide).length>0 && $(slide)[0].id === "five")
-    clearInterval(tim);
-    resetCounter();
-    runCounter();
-	} );
 });
 </script>
 
