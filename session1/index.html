@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="impress">
-  <div id="one" class="step intro-slide">
+  <div id="1" class="step intro-slide">
     <img src="img/e-logo.png" class="logo" />
     <div class="col-md-10 col-md-offset-2">
       <ul>
@@ -24,7 +24,7 @@
           Darko Arnautovic
         </li>
         <li class="smaller">
-          Matthew van der Veden
+          Matthew van der Velden
         </li>
         <li>
           <br />
@@ -36,17 +36,53 @@
     </div>
 
   </div>
-    <div id="two" class="step iframe-step" data-x="1500">
+    <div class="step iframe-step">
         <iframe src="built-in-directives-ng-model.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="three" class="step iframe-step" data-x="3000">
+    <div class="step iframe-step">
         <iframe src="built-in-directives-ng-blur.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="four" class="step iframe-step" data-x="4500">
+    <div class="step iframe-step">
         <iframe src="built-in-directives-ng-change.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
-    <div id="five" class="step iframe-step" data-x="6000">
+    <div class="step iframe-step">
         <iframe src="built-in-directives-ng-options.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-directives-ng-if.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-directives-ng-show.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-directives-ng-click.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-directives-ng-repeat.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-date.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-json.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-numbers.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-ordering.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-ordering-piping.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="built-in-filters-ordering-piping-filter.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="web-requests-http-GET.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+        <iframe src="web-requests-http-POST.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
 </div>
 <script src="js/jquery-1.9.1.min.js"></script>
@@ -55,7 +91,17 @@
 <script src="js/presentation.js"></script>
 <script>
 $(function() {
-$('#impress').jmpress();
+  var xAttVal = 0, idx = 0;
+
+  $('#impress').children('div').each(function(index) {
+    idx++;
+    if(index > 0) {
+      xAttVal += 1500;
+      $(this).attr("data-x", xAttVal).attr("id", idx);
+    }
+  });
+
+  $('#impress').jmpress();
 });
 </script>
 

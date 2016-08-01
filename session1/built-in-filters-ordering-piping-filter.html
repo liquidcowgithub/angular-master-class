@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞
+
+    Hey there,
+
+    Feel free to have a look around.
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+
+    -->
+    <meta charset="utf-8">
+    <title>Built-In Filters: orderBy + limitTo + filter</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+    pre {
+        white-space: pre-line;
+        background-color: #f8f8f8;
+    }
+
+    pre code {
+      background-color: transparent;
+    }
+    </style>
+</head>
+
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1>Built-In Filters: <span class="just-highlight">Filter</span></h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
+                <code>
+&lt;h3&gt;Athletes &amp; Countries &amp; Medals&lt;/h3&gt;
+&lt;label&gt;Search: &lt;input ng-model=&quot;$ctrl.resultsSearch&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+&lt;label&gt;Limit results to: &lt;input ng-model=&quot;$ctrl.resultsLimit&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+&lt;table&gt;
+    &lt;thead style=&quot;cursor: pointer;&quot;&gt;
+        &lt;th ng-click=&quot;$ctrl.orderTableBy('name');&quot;&gt;Name&lt;/th&gt;
+        ...
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr ng-repeat=&quot;athlete in $ctrl.athletes
+            | filter:$ctrl.resultsSearch
+            | orderBy:$ctrl.column:$ctrl.reverse
+            | limitTo:$ctrl.resultsLimit &quot;&gt;
+            &lt;td&gt;{{athlete.name}}&lt;/td&gt;
+            ...
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+            <h2>JavaScript</h2>
+            <pre>
+                <code>
+var exampleModule = angular.module('exampleModule',[]);
+exampleModule.controller('exampleController', function() {
+    var $ctrl = this;
+    $ctrl.column = 'name';
+    $ctrl.reverse = true;
+    $ctrl.resultsLimit = 3;
+    $ctrl.orderTableBy = function orderTableBy(columnName){
+        $ctrl.column = columnName;
+        $ctrl.reverse = !$ctrl.reverse;
+    };
+    $ctrl.athletes = [{ name: "Paavo Nurmi", country: "Finland", goldMedals: 9 }, ...];
+});
+                </code>
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <h2>Outcome</h2>
+            <pre ng-controller="exampleController as $ctrl">
+                <h3>Athletes & Countries & Medals</h3>
+                <label>Search: <input type="text" ng-model="$ctrl.resultsSearch"></input></label>
+                <label>Limit results to: <input type="number" ng-model="$ctrl.resultsLimit"></input></label>
+                <div class="table-responsive">
+                    <table class="table table-condensed">
+                        <thead style="cursor: pointer;">
+                            <th ng-click="$ctrl.orderTableBy('name');">Name</th>
+                            <th ng-click="$ctrl.orderTableBy('country');">Country</th>
+                            <th ng-click="$ctrl.orderTableBy('goldMedals');">Gold Medals</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="athlete in $ctrl.athletes | filter:$ctrl.resultsSearch | orderBy:$ctrl.column:$ctrl.reverse | limitTo:$ctrl.resultsLimit ">
+                                <td>{{athlete.name}}</td>
+                                <td>{{athlete.country}}</td>
+                                <td>{{athlete.goldMedals}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </pre>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var exampleModule = angular.module('exampleModule',[]);
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
+        $ctrl.column = 'name';
+        $ctrl.reverse = true;
+        $ctrl.resultsLimit = 3;
+        $ctrl.orderTableBy = function orderTableBy(columnName){
+            $ctrl.column = columnName;
+            $ctrl.reverse = !$ctrl.reverse;
+        };
+        $ctrl.athletes = [{
+            name: "Paavo Nurmi",
+            country: "Finland",
+            goldMedals: 9
+        },
+        {
+            name: "Usain Bolt",
+            country: "Jamaica",
+            goldMedals: 6
+        },
+        {
+            name: "Michael Phelps",
+            country: "USA",
+            goldMedals: 18
+        },
+        {
+            name: "Larisa Latynina",
+            country: "Soviet Union",
+            goldMedals: 9
+        }];
+    });
+</script>
+
+<!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+</html>

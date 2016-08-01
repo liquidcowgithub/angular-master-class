@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--
 
@@ -19,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngModel</title>
+    <title>Built-In Directives: ngRepeat</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -40,46 +41,66 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Built-In Directives: <span class="just-highlight">ngModel</span></h1>
-    <br /><br />
+    <h1>Built-In Directives: <span class="just-highlight">ngIf</span></h1>
     <div class="row">
         <div class="col-md-6">
-            <h2><span class="just-highlight-blue">HTML</span></h2>
-            <div ng-non-bindable="">
-                <pre>
-                    <code>
-Fastest Man in the World: &lt;input ng-model=&quot;fastestMan&quot;&gt;
-&lt;h3&gt;{{fastestMan}}&lt;/h3&gt; is the fastest man in the world!
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
+                <code>
+&lt;h3&gt;Rings Toggler&lt;/h3&gt;
+&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.showRings = !$ctrl.showRings&quot;&gt;Toggle Cool Rings&lt;/button&gt;
+&lt;div ng-if=&quot;$ctrl.showRings&quot;&gt;
+  ,---.   ,---.   ,---.
+,'     `.'     `.'     `.
+|     ,-|-.   ,-|-.     |
+`.  ,' ,'. `.' ,'. `.  ,'
+  `-|-'   `-|-'   `-|-'
+    `.     ,',     ,'
+      `---'   `---'
+&lt;/div&gt;
                 </code>
-                </pre>
-            </div>
-            <h2><span class="just-highlight-blue">JavaScript</span></h2>
+            </pre>
+            <h2>JavaScript</h2>
             <pre>
                 <code>
 var exampleModule = angular.module('exampleModule',[]);
-exampleModule.controller('exampleController', function() {
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
 
-  var $ctrl = this;
-
-});
+        $ctrl.showRings = false;
+    });
                 </code>
             </pre>
         </div>
         <div class="col-md-6">
-            <h2><span class="just-highlight-blue">Outcome</span></h2>
-            <pre ng-controller="exampleController as $ctrl" ng-init="fastestMan='Yohan Blake'">
-              Fastest Man in the World: <input ng-model="fastestMan">
-              <h3>{{fastestMan}}</h3> is the fastest man in the world!
+            <h2>Outcome</h2>
+            <pre ng-controller="exampleController as $ctrl">
+                <h3>Rings Toggler</h3>
+                    <button class="btn" ng-click="$ctrl.showRings = !$ctrl.showRings">Toggle Cool Rings</button>
+                    <div ng-if="$ctrl.showRings" style="white-space: pre;">
+  ,---.   ,---.   ,---.
+,'     `.'     `.'     `.
+|     ,-|-.   ,-|-.     |
+`.  ,' ,'. `.' ,'. `.  ,'
+  `-|-'   `-|-'   `-|-'
+    `.     ,',     ,'
+      `---'   `---'
+                    </div>
             </pre>
         </div>
     </div>
+
 </body>
+
 <script type="text/javascript">
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
+
+        $ctrl.showRings = false;
     });
 </script>
+
 
 <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
@@ -92,8 +113,6 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
-
-
 
 
 </html>
