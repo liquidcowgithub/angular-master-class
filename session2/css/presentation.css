@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../fonts/Oswald-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oswald-Light';
+    src: url('../fonts/Oswald-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../fonts/Oswald-Regular.ttf') format('truetype');
+}
+body {
+    background-color: #37474f;
+    font-family: 'Oswald-Regular';
+    color: #cacaca;
+}
+.step {
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    padding: 40px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.step:not(.active) {
+    opacity: 0.3;
+}
+
+.step.iframe-step {
+  width: 1000px;
+  height: 800px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
+}
+
+.step .row {
+  margin:0;
+  padding: 0;
+}
+
+.step .row .col-md-8,
+.step .row .col-md-4 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-size: 90pt;
+    color: #fff;
+}
+h3 {
+    font-size: 40pt;
+    color: #fff;
+}
+.one> p {
+    font-size: 20pt;
+}
+.centered {
+  text-align: center;
+}
+#two> ul> li {
+    font-size: 56pt;
+    color: #fff;
+    margin: 15px;
+}
+#three> ul> li,
+#nine> ul> li {
+    font-size: 56pt;
+    color: #fff;
+}
+#three> ul> li .fa-li,
+#nine> ul> li .fa-li {
+    position: static;
+}
+
+#three i,
+#nine i {
+  color:#FFD966;
+}
+
+ul {
+  list-style-type: none;
+}
+ul > li {
+  font-size: 40pt;
+  margin:45px;
+}
+
+.highlight-point {
+  color: #FFD966;
+  font-size: 60pt;
+}
+
+h1 .just-highlight {
+  font-style: normal;
+}
+.just-highlight {
+  color: #FFD966;
+  font-style: italic;
+}
+.just-highlight-blue {
+  color: #cacaca;
+}
+#five {
+  text-align: center;
+  font-size: 100pt;
+  color:#64ffda;
+}
+
+#count.medium {
+  color: #FFD966;
+}
+
+#count.medium.danger {
+color: #C86000;
+}
+#six, #seven, #eleven {
+  text-align: center;
+}
+#six h1 {
+  font-size: 160pt !important;
+}
+
+#seven h1 {
+  font-size: 140pt !important;
+}
+
+.intro-slide li {
+  text-align: right;
+  font-size: 30pt;
+}
+
+.intro-slide li.smaller {
+  font-size: 18pt;
+  color:#9e9e9e;
+}
+
+.logo {
+  width: 400px;
+    position: absolute;
+    height: 461px;
+    left:-60px;
+    bottom: -185px;
+    z-index: 10;
+}
+
+.slogan {
+  width: 300px;
+    float: right;
+    position: relative;
+    height: 106px;
+    margin:0;
+    padding:0;
+}
+
+.iframe-content h1 {
+  font-size: 60pt;
+}
+
+.iframe-content h3 {
+  color:#FFD966;
+}
