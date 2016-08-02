@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞
+
+    Hey there,
+
+    Feel free to have a look around.
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+
+    -->
+    <meta charset="utf-8">
+    <title>Built-In Directives: ngModel</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+    pre {
+        white-space: pre-line;
+        background-color: #f8f8f8;
+        font-size: 30pt;
+    }
+
+    pre code {
+      background-color: transparent;
+    }
+    </style>
+</head>
+
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1><span class="just-highlight">ngModel</span></h1>
+    <br /><br />
+    <div class="row">
+        <div class="col-md-12">
+            <h2><span class="just-highlight-blue">HTML</span></h2>
+            <div ng-non-bindable="">
+                <pre>
+                    <code>
+Fastest Man in the World:
+
+&lt;input ng-model=&quot;fastestMan&quot;&gt;
+
+&lt;h3&gt;{{fastestMan}}&lt;/h3&gt; is the fastest man in the world!
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var exampleModule = angular.module('exampleModule',[]);
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
+    });
+</script>
+
+<!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+</html>

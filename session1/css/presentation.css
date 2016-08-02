@@ -102,8 +102,13 @@ ul > li {
   color: #FFD966;
   font-size: 60pt;
 }
+
+h1 .just-highlight {
+  font-style: normal;
+}
 .just-highlight {
   color: #FFD966;
+  font-style: italic;
 }
 .just-highlight-blue {
   color: #cacaca;
