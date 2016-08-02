@@ -56,9 +56,6 @@ body {
   padding: 0;
 }
 
-#one {
-    text-align: center;
-}
 h1 {
     font-size: 90pt;
     color: #fff;
@@ -67,8 +64,11 @@ h3 {
     font-size: 40pt;
     color: #fff;
 }
-#one> p {
+.one> p {
     font-size: 20pt;
+}
+.centered {
+  text-align: center;
 }
 #two> ul> li {
     font-size: 56pt;
@@ -93,9 +93,9 @@ h3 {
 ul {
   list-style-type: none;
 }
-#four > ul > li {
-  font-size: 48pt;
-  margin:15px;
+ul > li {
+  font-size: 40pt;
+  margin:45px;
 }
 
 .highlight-point {
