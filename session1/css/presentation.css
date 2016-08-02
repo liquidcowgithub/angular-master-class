@@ -172,3 +172,7 @@ color: #C86000;
 .iframe-content h3 {
   color:#FFD966;
 }
+
+pre h3 {
+  font-size:35pt;
+}

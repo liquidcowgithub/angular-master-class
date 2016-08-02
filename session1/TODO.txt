@@ -1,0 +1,11 @@
+Change code slides layout 
+
+- click
+- if / show / hide
+- options
+- repeat
+- show
+
+intro slide
+
+basic bootstrapping slides
