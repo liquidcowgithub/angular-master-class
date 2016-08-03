@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞
+
+    Hey there,
+
+    Feel free to have a look around.
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+
+    -->
+    <meta charset="utf-8">
+    <title>Basic: ngApp</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1><span class="just-highlight">ngApp</span></h1>
+    <br /><br />
+    <div class="row">
+        <div class="col-md-12">
+            <h2><span class="just-highlight-blue">HTML</span></h2>
+            <div ng-non-bindable="">
+                <pre>
+                    <code>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;My Cool New Angular App&lt;/title&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+</html>

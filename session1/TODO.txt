@@ -10,4 +10,4 @@ Change code slides layout
 
 intro slide
 
-basic bootstrapping slides
+basic bootstrapping slides - done
