@@ -32,15 +32,22 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-    pre {
-        white-space: pre-line;
-        background-color: #f8f8f8;
-        font-size: 30pt;
-    }
+        pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 19pt;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
 
-    pre code {
-      background-color: transparent;
-    }
+        code {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
     </style>
 </head>
 
@@ -53,7 +60,8 @@
             <pre ng-non-bindable="">
                 <code>
 &lt;h3&gt;Rings Toggler&lt;/h3&gt;
-&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.toggleRings()&quot;&gt;Toggle Rings&lt;/button&gt;
+&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.toggleRings()&quot;&gt;
+Toggle Rings&lt;/button&gt;
 &lt;div ng-if=&quot;$ctrl.showRings&quot;&gt;
   ,---.   ,---.   ,---.
 ,'     `.'     `.'     `.

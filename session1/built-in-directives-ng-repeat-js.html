@@ -32,11 +32,18 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 25pt;
+            font-size: 20pt;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
         }
         
         pre code {
             background-color: transparent;
+        }
+
+        code {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
         }
     </style>
 </head>
@@ -55,10 +62,7 @@ $ctrl.athletes = [{
                     name: "Usain Bolt",
                     country: "Jamaica"
                 },
-                {
-                    name: "Michael Phelps",
-                    country: "USA"
-                },
+                ...
                 {
                     name: "Larisa Latynina",
                     country: "Soviet Union"
