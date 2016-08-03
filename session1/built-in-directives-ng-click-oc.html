@@ -35,6 +35,7 @@
     pre {
         white-space: pre-line;
         background-color: #f8f8f8;
+        font-size: 30pt;
     }
 
     pre code {
@@ -44,42 +45,10 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Built-In Directives: <span class="just-highlight">ngClick</span></h1>
+    <h1><span class="just-highlight">ngClick</span></h1>
+        <br /><br />
     <div class="row">
-        <div class="col-md-6">
-            <h2>HTML</h2>
-            <pre ng-non-bindable="">
-                <code>
-&lt;h3&gt;Rings Toggler&lt;/h3&gt;
-&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.toggleRings()&quot;&gt;Toggle Rings&lt;/button&gt;
-&lt;div ng-if=&quot;$ctrl.showRings&quot;&gt;
-  ,---.   ,---.   ,---.
-,'     `.'     `.'     `.
-|     ,-|-.   ,-|-.     |
-`.  ,' ,'. `.' ,'. `.  ,'
-  `-|-'   `-|-'   `-|-'
-    `.     ,',     ,'
-      `---'   `---'
-&lt;/div&gt;
-                </code>
-            </pre>
-            <h2>JavaScript</h2>
-            <pre>
-                <code>
-var exampleModule = angular.module('exampleModule',[]);
-exampleModule.controller('exampleController', function() {
-    var $ctrl = this;
-
-    $ctrl.showRings = false;
-
-    $ctrl.toggleRings = function(){
-        $ctrl.showRings = !$ctrl.showRings
-    }
-});
-                </code>
-            </pre>
-        </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
                 <h3>Rings Toggler</h3>
