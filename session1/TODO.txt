@@ -3,7 +3,7 @@ Change code slides layout
 (Every slide to have heading and 1 sentence explanation) - ask each other where we used it in a cool way (war story)
 
 - click - done
-- if / show / hide
+- if - done
 - options
 - repeat - done
 - show
