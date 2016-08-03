@@ -20,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngModel</title>
+    <title>Built-In Directives: ngRepeat</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,7 +32,7 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 19pt;
+            font-size: 23pt;
             padding-top: 0px !important;
             padding-bottom: 0px !important;
         }
@@ -49,31 +49,30 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">ngModel</span></h1>
+    <h1><span class="just-highlight">ngIf</span></h1>
     <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2><span class="just-highlight-blue">HTML</span></h2>
-            <div ng-non-bindable="">
-                <pre>
-                    <code>
-Fastest Man in the World:
-&lt;input ng-model=&quot;fastestMan&quot;&gt;
-
-&lt;h3&gt;{{fastestMan}}&lt;/h3&gt; - is the
-fastest man in the world!
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
+                <code>
+&lt;h3&gt;Rings Toggler&lt;/h3&gt;
+&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.showRings = !$ctrl.showRings&quot;&gt;Toggle Cool Rings&lt;/button&gt;
+&lt;div ng-if=&quot;$ctrl.showRings&quot;&gt;
+  ,---.   ,---.   ,---.
+,'     `.'     `.'     `.
+|     ,-|-.   ,-|-.     |
+`.  ,' ,'. `.' ,'. `.  ,'
+  `-|-'   `-|-'   `-|-'
+    `.     ,',     ,'
+      `---'   `---'
+&lt;/div&gt;
                 </code>
-                </pre>
-            </div>
+            </pre>
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function() {
-        var $ctrl = this;
-    });
-</script>
+
 
 <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
@@ -86,8 +85,6 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
-
-
 
 
 </html>
