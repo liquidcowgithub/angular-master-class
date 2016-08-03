@@ -32,7 +32,7 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 23pt;
+            font-size: 19pt;
             padding-top: 0px !important;
             padding-bottom: 0px !important;
         }
@@ -49,14 +49,16 @@
 </head>
 
 <body class="iframe-content" ng-app="exampleModule">
-    <h1>Built-In Directives: <span class="just-highlight">ngShow</span></h1>
+    <h1><span class="just-highlight">ngShow</span></h1>
+    <br /><br />
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h2>HTML</h2>
             <pre ng-non-bindable="">
                 <code>
 &lt;h3&gt;Rings Toggler&lt;/h3&gt;
-&lt;button class=&quot;btn&quot; ng-click=&quot;$ctrl.showRings = !$ctrl.showRings&quot;&gt;Toggle Cool Rings&lt;/button&gt;
+&lt;button ng-click=&quot;$ctrl.showRings = !$ctrl.showRings&quot;&gt;
+Toggle Cool Rings&lt;/button&gt;
 &lt;div ng-show=&quot;$ctrl.showRings&quot;&gt;
   ,---.   ,---.   ,---.
 ,'     `.'     `.'     `.
@@ -68,46 +70,9 @@
 &lt;/div&gt;
                 </code>
             </pre>
-            <h2>JavaScript</h2>
-            <pre>
-                <code>
-var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function() {
-        var $ctrl = this;
-
-        $ctrl.showRings = false;
-    });
-                </code>
-            </pre>
-        </div>
-        <div class="col-md-6">
-            <h2>Outcome</h2>
-            <pre ng-controller="exampleController as $ctrl">
-                <h3>Rings Toggler</h3>
-                    <button class="btn" ng-click="$ctrl.showRings = !$ctrl.showRings">Toggle Cool Rings</button>
-                    <div ng-show="$ctrl.showRings" style="white-space: pre;">
-  ,---.   ,---.   ,---.
-,'     `.'     `.'     `.
-|     ,-|-.   ,-|-.     |
-`.  ,' ,'. `.' ,'. `.  ,'
-  `-|-'   `-|-'   `-|-'
-    `.     ,',     ,'
-      `---'   `---'
-                    </div>
-            </pre>
         </div>
     </div>
-
 </body>
-
-<script type="text/javascript">
-    var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function() {
-        var $ctrl = this;
-
-        $ctrl.showRings = false;
-    });
-</script>
 
 
 <!--
