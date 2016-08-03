@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <!--
 
@@ -23,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngRepeat</title>
+    <title>Built-In Filters: date</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,33 +29,31 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-    pre {
-        white-space: pre-line;
-        background-color: #f8f8f8;
-        font-size: 30pt;
-    }
-
-    pre code {
-      background-color: transparent;
-    }
+ 	    pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">ngClick</span></h1>
+        <h1><span class="just-highlight">Date</span> Filter</h1>
         <br /><br />
     <div class="row">
         <div class="col-md-12">
             <h2>JavaScript</h2>
             <pre>
                 <code>
-    var $ctrl = this;
-
-    $ctrl.showRings = false;
-
-    $ctrl.toggleRings = function(){
-        $ctrl.showRings = !$ctrl.showRings
-    }
+var $ctrl = this;
+$ctrl.firstFemaleAthletesDate = new Date('1900');
+$ctrl.manyMedalsDate = new Date('08/08/2008');
+$ctrl.today = new Date();
+$ctrl.startDate = new Date("August 5, 2016");
                 </code>
             </pre>
         </div>
@@ -76,8 +71,6 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
-
-
 
 
 </html>

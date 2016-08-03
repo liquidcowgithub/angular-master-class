@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <!--
 
@@ -23,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngRepeat</title>
+    <title>Built-In Filters: date</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,33 +29,31 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-    pre {
-        white-space: pre-line;
-        background-color: #f8f8f8;
-        font-size: 30pt;
-    }
-
-    pre code {
-      background-color: transparent;
-    }
+        pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">ngClick</span></h1>
+    <h1><span class="just-highlight">Date</span> Filter</h1>
         <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2>JavaScript</h2>
-            <pre>
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
                 <code>
-    var $ctrl = this;
-
-    $ctrl.showRings = false;
-
-    $ctrl.toggleRings = function(){
-        $ctrl.showRings = !$ctrl.showRings
-    }
+&lt;h3&gt;Some Dates&lt;/h3&gt;
+&lt;p&gt;Firt female athletes: {{$ctrl.firstFemaleAthletesDate | date:'y G'}}&lt;/p&gt;
+&lt;p&gt;Most gold medals ever won: {{$ctrl.manyMedalsDate | date:'shortDate'}}&lt;/p&gt;
+&lt;p&gt;Start of the 2016 Olympics: {{$ctrl.startDate | date:'fullDate'}}&lt;/p&gt;
+&lt;p&gt;Today's Date: {{$ctrl.today | date:'MMM d, y h:mm:ss a'}}&lt;/p&gt;
                 </code>
             </pre>
         </div>
@@ -76,8 +71,6 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
-
-
 
 
 </html>

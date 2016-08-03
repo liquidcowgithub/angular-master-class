@@ -29,29 +29,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
         pre {
-            white-space: pre-line
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
         }
-        .col-md-6 .just-highlight {
-          font-size: 40pt;
+        
+        pre code {
+            background-color: transparent;
         }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Built-In Directives: <span class="just-highlight">ngChange</span></h1>
+    <h1><span class="just-highlight">ngChange</span></h1>
     <br /><br />
     <div class="row">
-        <div class="col-md-6">
-            <h2><span class="just-highlight-blue">HTML</span></h2>
-            <div ng-non-bindable="">
-                <pre>
-                    <code>
-&lt;input type=&quot;text&quot; ng-change=&quot;changeFunc()&quot;
-ng-model=&quot;changeValue&quot; /&gt;
-&lt;p&gt;Usain will win {{count}} gold medals.&lt;/p&gt;
-                </code>
-                </pre>
-            </div>
+        <div class="col-md-12">
             <h2><span class="just-highlight-blue">JavaScript</span></h2>
             <pre>
                 <code>
@@ -66,29 +59,8 @@ exampleModule.controller('exampleController', function() {
                 </code>
             </pre>
         </div>
-        <div class="col-md-6">
-            <h2><span class="just-highlight-blue">Outcome</span></h2>
-            <pre ng-controller="exampleController as $ctrl">
-              <input type="text" ng-change="$ctrl.changeFunc()" ng-model="$ctrl.changeValue" />
-              <br />
-              <p>Usain will win <span class="just-highlight">{{$ctrl.count}}</span> gold medals.</p>
-            </pre>
-        </div>
     </div>
 </body>
-<script type="text/javascript">
-    var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function() {
-        var $ctrl = this;
-
-        $ctrl.count = 0;
-
-        $ctrl.changeFunc = function() {
-            $ctrl.count++;
-        };
-    });
-</script>
-
 <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
 -->
