@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--
 
@@ -28,22 +29,24 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-    pre {
-        white-space: pre-line;
-        background-color: #f8f8f8;
-    }
-
-    pre code {
-      background-color: transparent;
-    }
+        pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Built-In Directives: <span class="just-highlight">ngRepeat</span></h1>
+    <h1><span class="just-highlight">ngRepeat</span></h1>
+    <br /><br />
     <div class="row">
-        <div class="col-md-6">
-            <h2>HTML</h2>
+        <div class="col-md-12">
+            <h2><span class="just-highlight-blue">HTML</span></h2>
             <div ng-non-bindable="">
                 <pre>
                     <code>
@@ -54,63 +57,13 @@
                 </code>
                 </pre>
             </div>
-            <h2>JavaScript</h2>
-            <pre>
-                <code>
-var exampleModule = angular.module('exampleModule',[]);
-exampleModule.controller('exampleController', function() {
-
-var $ctrl = this;
-
- $ctrl.athletes = [{
-            name: "Usain Bolt",
-            country: "Jamaica"
-        },
-        {
-            name: "Michael Phelps",
-            country: "USA"
-        },
-        {
-            name: "Larisa Latynina",
-            country: "Soviet Union"
-        }];
-                </code>
-            </pre>
-        </div>
-        <div class="col-md-6">
-            <h2>Outcome</h2>
-            <pre ng-controller="exampleController as $ctrl">
-                <h3>Athletes & Countries</h3>
-                <div ng-repeat="athlete in $ctrl.athletes">
-                    {{athlete.name}} -> {{athlete.country}}
-                </div>
-            </pre>
         </div>
     </div>
-</body>
-<script type="text/javascript">
-    var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function() {
-        var $ctrl = this;
 
-        $ctrl.athletes = [{
-            name: "Usain Bolt",
-            country: "Jamaica"
-        },{
-            name: "Michael Phelps",
-            country: "USA"
-        },
-        {
-            name: "Larisa Latynina",
-            country: "Soviet Union"
-        }];
-    });
-</script>
-
-<!--
+    <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
 -->
-<script type="text/javascript">
+    <script type="text/javascript">
     $(document).ready(function() {
         hljs.configure({ 'languages': ['html', 'javascript'] });
   $('pre code').each(function(i, block) {
@@ -118,8 +71,5 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
-
-
-
 
 </html>

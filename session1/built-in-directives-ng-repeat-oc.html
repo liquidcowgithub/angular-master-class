@@ -20,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: ngModel</title>
+    <title>Built-In Directives: ngRepeat</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,11 +32,7 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 30pt;
-        }
-        
-        pre h3 {
-            font-size: 35pt;
+            font-size: 25pt;
         }
         
         pre code {
@@ -46,22 +42,17 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">ngModel</span></h1>
+    <h1><span class="just-highlight">ngRepeat</span></h1>
     <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2><span class="just-highlight-blue">HTML</span></h2>
-            <div ng-non-bindable="">
-                <pre>
-                    <code>
-Fastest Man in the World:
-&lt;input ng-model=&quot;fastestMan&quot;&gt;
-
-&lt;h3&gt;{{fastestMan}}&lt;/h3&gt; - is the
-fastest man in the world!
-                </code>
-                </pre>
-            </div>
+            <h2>Outcome</h2>
+            <pre ng-controller="exampleController as $ctrl">
+                <h3>Athletes & Countries</h3>
+                <div ng-repeat="athlete in $ctrl.athletes">
+                    {{athlete.name}} -> {{athlete.country}}
+                </div>
+            </pre>
         </div>
     </div>
 </body>
@@ -69,6 +60,18 @@ fastest man in the world!
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
+
+        $ctrl.athletes = [{
+            name: "Usain Bolt",
+            country: "Jamaica"
+        },{
+            name: "Michael Phelps",
+            country: "USA"
+        },
+        {
+            name: "Larisa Latynina",
+            country: "Soviet Union"
+        }];
     });
 </script>
 
