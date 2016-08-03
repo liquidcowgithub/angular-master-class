@@ -29,21 +29,23 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-    pre {
-        white-space: pre-line;
-        background-color: #f8f8f8;
-    }
-
-    pre code {
-      background-color: transparent;
-    }
+        pre {
+            white-space: pre-line;
+            background-color: #f8f8f8;
+            font-size: 25pt;
+        }
+        
+        pre code {
+            background-color: transparent;
+        }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Web Requests: <span class="just-highlight">GET</span></h1>
+    <h1><span class="just-highlight">$http</span> GET</h1>
+    <br /><br />
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h2>HTML</h2>
             <pre ng-non-bindable="">
                 <code>
@@ -64,61 +66,9 @@
 &lt;/table&gt;
                 </code>
             </pre>
-            <h2>JavaScript</h2>
-            <pre>
-                <code>
-var exampleModule = angular.module('exampleModule',[]);
-exampleModule.controller('exampleController', function($http) {
-    var $ctrl = this;
-    $http({
-        method: 'GET',
-        url: 'http://frontendshowcase.azurewebsites.net/api/suppliers'
-    })
-    .then(function(response){
-        $ctrl.suppliers = response.data;
-    });
-});
-                </code>
-            </pre>
-        </div>
-        <div class="col-md-6">
-            <h2>Outcome</h2>
-            <pre ng-controller="exampleController as $ctrl">
-                <h3>Olympics Suppliers</h3>
-                <div class="table-responsive">
-                    <table class="table table-condensed">
-                        <thead>
-                            <th>Name</th>
-                            <th>City</th>
-                            <th>Reference</th>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="supplier in $ctrl.suppliers | limitTo:4 ">
-                                <td>{{supplier.name}}</td>
-                                <td>{{supplier.city}}</td>
-                                <td>{{supplier.reference}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </pre>
         </div>
     </div>
 </body>
-
-<script type="text/javascript">
-    var exampleModule = angular.module('exampleModule',[]);
-    exampleModule.controller('exampleController', function($http) {
-        var $ctrl = this;
-        $http({
-            method: 'GET',
-            url: 'http://frontendshowcase.azurewebsites.net/api/suppliers'
-        })
-        .then(function(response){
-            $ctrl.suppliers = response.data;
-        });
-    });
-</script>
 
 <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
