@@ -56,6 +56,10 @@ body {
   padding: 0;
 }
 
+.profile-pic{
+  padding-top: 6vh;
+}
+
 h1 {
     font-size: 90pt;
     color: #fff;

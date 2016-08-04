@@ -17,6 +17,7 @@ basic bootstrapping slides - done
 Dry run feedback:
 --- make js references local. if no internet connection all external js files wont load.
 --- Main Page Colours -> white for entelect logo
+        Entelect branding needs a general clean up.
 --- Entelect introdoctuion
 --- "Static App." to "Static Content"
 --- ng MVC and philosophy (angular extends html)
