@@ -12,3 +12,6 @@ Split examples:
 intro slide
 
 basic bootstrapping slides - done
+
+
+--- make js references local. if no internet connection all external js files wont load.
