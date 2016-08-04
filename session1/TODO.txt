@@ -19,8 +19,8 @@ Dry run feedback:
 --- Main Page Colours -> white for entelect logo
         Entelect branding needs a general clean up.
 --- Entelect introdoctuion
---- "Static App." to "Static Content"
---- ng MVC and philosophy (angular extends html)
+--- "Static App." to "Static Content" - done
+--- ng MVC and philosophy (angular extends html) 
 --- explain the "ng things"
 --- Summary slides per type
     if 
