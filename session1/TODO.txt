@@ -23,10 +23,10 @@ Dry run feedback:
 --- ng MVC and philosophy (angular extends html) 
 --- explain the "ng things"
 --- Summary slides per type
-    if 
-    inputs
-    repeats
-    events
+    if  - done
+    inputs - done
+    repeats - done
+    events - done
 
 --- homework slide - needs review
 
