@@ -32,7 +32,7 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 25pt;
+            font-size: 19pt;
         }
         
         pre code {
@@ -51,7 +51,10 @@
                 <code>
 &lt;h3&gt;Olympics Suppliers&lt;/h3&gt;
 &lt;form ng-submit=&quot;$ctrl.postNewSupplier()&quot;&gt;
-    &lt;label&gt;Name: &lt;input required ng-model=&quot;$ctrl.newSupplier.name&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+    &lt;label&gt;Name: 
+        &lt;input required 
+               ng-model=&quot;$ctrl.newSupplier.name&quot;&gt;&lt;/input&gt;
+    &lt;/label&gt;
     ...
     &lt;button type=&quot;submit&quot;&gt;Create new supplier&lt;/button&gt;
 &lt;/form&gt;

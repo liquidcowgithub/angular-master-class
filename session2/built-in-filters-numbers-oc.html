@@ -32,7 +32,7 @@
  	    pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 25pt;
+            font-size: 22pt;
         }
         
         pre code {
@@ -48,15 +48,14 @@
         <div class="col-md-12">
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
-                <h3>Opening Ceremony Ticket Price Calculator</h3>
                 <form>
                     <label>Price per ticket:</label>
-                    <p>${{$ctrl.ticketPrice | number:2}}&nbsp;<small class="text-muted">☜(°O°☜) Actual price!</small></p>
+                    <p>${{$ctrl.price | number:2}}&nbsp;<small class="text-muted">☜(°O°☜) Actual price!</small></p>
                     <label>Number of tickets:</label>
                     <input type="number" ng-model="$ctrl.numberOfTickets">
                     <div>
                         <label>Total price:</label>
-                    <p>${{$ctrl.ticketPrice * $ctrl.numberOfTickets | number:2}}</p>
+                    <p>${{$ctrl.price * $ctrl.numberOfTickets | number:2}}</p>
                     </div>
                 </form>
             </pre>
@@ -69,7 +68,7 @@
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
-        $ctrl.ticketPrice = 4600;
+        $ctrl.price = 4600;
         $ctrl.numberOfTickets = 1;
     });
 </script>

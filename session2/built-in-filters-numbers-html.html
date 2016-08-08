@@ -32,7 +32,7 @@
  	    pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 25pt;
+            font-size: 19pt;
         }
         
         pre code {
@@ -45,25 +45,18 @@
     <h1><span class="just-highlight">Number</span> Filter</h1>
         <br /><br />
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h2>HTML</h2>
             <pre ng-non-bindable="">
                 <code>
-&lt;h3&gt;Opening Ceremony Ticket Price Calculator&lt;/h3&gt;
-&lt;form&gt;
-    &lt;div&gt;
-        &lt;label&gt;Price per ticket:&lt;/label&gt;
-        &lt;p&gt;${{$ctrl.ticketPrice | number:2}}&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label&gt;Number of tickets:&lt;/label&gt;
-        &lt;input type=&quot;number&quot; ng-model=&quot;$ctrl.numberOfTickets&quot;&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label&gt;Total price:&lt;/label&gt;
-        &lt;p&gt;${{$ctrl.ticketPrice * $ctrl.numberOfTickets | number:2}}&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
+&lt;label&gt;Price per ticket:&lt;/label&gt;
+&lt;p&gt;${{$ctrl.price | number:2}}&lt;/p&gt;
+
+&lt;label&gt;Number of tickets:&lt;/label&gt;
+&lt;input type=&quot;number&quot; ng-model=&quot;$ctrl.numberOfTickets&quot;&gt;
+
+&lt;label&gt;Total price:&lt;/label&gt;
+&lt;p&gt;${{$ctrl.price * $ctrl.numberOfTickets | number:2}}&lt;/p&gt;
                 </code>
             </pre>
         </div>

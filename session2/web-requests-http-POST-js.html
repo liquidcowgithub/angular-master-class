@@ -32,7 +32,7 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 25pt;
+            font-size: 15pt;
         }
         
         pre code {
@@ -49,33 +49,30 @@
             <h2>JavaScript</h2>
             <pre>
                 <code>
-var exampleModule = angular.module('exampleModule',[]);
-exampleModule.controller('exampleController', function($http) {
-    var $ctrl = this;
-    $ctrl.newSupplier = {};
-    $ctrl.postNewSupplier = postNewSupplier;
+var $ctrl = this;
+$ctrl.newSupplier = {};
+$ctrl.postNewSupplier = postNewSupplier;
 
-    getSuppliers();
+getSuppliers();
 
-    function postNewSupplier(){
-        $http({
-            method: 'POST',
-            url: 'http://frontendshowcase.azurewebsites.net/api/suppliers',
-            data: $ctrl.newSupplier
-        })
-        .then(getSuppliers);
-    }
+function postNewSupplier(){
+    $http({
+        method: 'POST',
+        url: 'http://frontendshowcase.azurewebsites.net/api/suppliers',
+        data: $ctrl.newSupplier
+    })
+    .then(getSuppliers);
+}
 
-    function getSuppliers(){
-        $http({
-            method: 'GET',
-            url: 'http://frontendshowcase.azurewebsites.net/api/suppliers'
-        })
-        .then(function(response){
-            $ctrl.suppliers = response.data;
-        });
-    }
-});
+function getSuppliers(){
+    $http({
+        method: 'GET',
+        url: 'http://frontendshowcase.azurewebsites.net/api/suppliers'
+    })
+    .then(function(response){
+        $ctrl.suppliers = response.data;
+    });
+}
                 </code>
             </pre>
         </div>
