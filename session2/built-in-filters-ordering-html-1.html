@@ -41,20 +41,27 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1>Built-In Filters: <span class="just-highlight">orderBy</span></h1>
+    <h1><span class="just-highlight">orderBy</span></h1>
     <div class="row">
         <div class="col-md-12">
-            <h2>JavaScript</h2>
-            <pre>
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
                 <code>
-    var $ctrl = this;
-    $ctrl.column = 'name';
-    $ctrl.reverse = true;
-    $ctrl.orderTableBy = function orderTableBy(columnName){
-        $ctrl.column = columnName;
-        $ctrl.reverse = !$ctrl.reverse;
-    };
-    $ctrl.athletes = [{ name: "Paavo Nurmi", country: "Finland", goldMedals: 9 }, ...];
+&lt;h3&gt;Athletes &amp; Countries &amp; Medals&lt;/h3&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Country&lt;/th&gt;
+        &lt;th&gt;Gold Medals&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr ng-repeat=&quot;athlete in $ctrl.athletes | orderBy:'name':true&quot;&gt;
+            &lt;td&gt;{{athlete.name}}&lt;/td&gt;
+            &lt;td&gt;{{athlete.country}}&lt;/td&gt;
+            &lt;td&gt;{{athlete.goldMedals}}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
                 </code>
             </pre>
         </div>
