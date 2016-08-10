@@ -1,1 +1,8 @@
 Last Time
+
+Animations
+Direct DOM manipulation
+Don't reinvent the wheel
+Running in production
+build tools & packaging
+
