@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+
+    (☞ﾟ∀ﾟ)☞
+
+    Hey there,
+
+    Feel free to have a look around.
+    Some tricks with jquery were used to get the highlighting working. Otherwise, jQuery could've been left out of these examples.
+
+    html escaper for examples : http://www.freeformatter.com/html-escape.html#ad-output
+
+    Cheers
+    Matt & Darko
+
+    ¯\(º_o)/¯
+
+    -->
+    <meta charset="utf-8">
+    <title>Built-In Filters: orderBy</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+    pre {
+        white-space: pre-line;
+        background-color: #f8f8f8;
+    }
+
+    pre code {
+      background-color: transparent;
+    }
+    </style>
+</head>
+
+<body class="container iframe-content" ng-app="exampleModule">
+    <h1>Built-In Filters: <span class="just-highlight">orderBy</span></h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>HTML</h2>
+            <pre ng-non-bindable="">
+                <code>
+&lt;h3&gt;Athletes &amp; Countries &amp; Medals&lt;/h3&gt;
+&lt;table&gt;
+    &lt;thead style=&quot;cursor: pointer;&quot;&gt; // (°ロ°)☝ No inline styling!
+        &lt;th ng-click=&quot;$ctrl.orderTableBy('name');&quot;&gt;Name&lt;/th&gt;
+        &lt;th ng-click=&quot;$ctrl.orderTableBy('country');&quot;&gt;Country&lt;/th&gt;
+        &lt;th ng-click=&quot;$ctrl.orderTableBy('goldMedals');&quot;&gt;Gold Medals&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr ng-repeat=&quot;athlete in $ctrl.athletes | orderBy:$ctrl.column:$ctrl.reverse&quot;&gt;
+            &lt;td&gt;{{athlete.name}}&lt;/td&gt;
+            &lt;td&gt;{{athlete.country}}&lt;/td&gt;
+            &lt;td&gt;{{athlete.goldMedals}}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+</body>
+
+<!--
+This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
+-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        hljs.configure({ 'languages': ['html', 'javascript'] });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+</html>
