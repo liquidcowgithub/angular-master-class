@@ -49,8 +49,6 @@
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
                 <h3>Some Dates</h3>
-                <p>Firt female athletes: {{$ctrl.firstFemaleAthletesDate | date:'y G'}}</p>
-                <p>Most gold medals ever won: {{$ctrl.manyMedalsDate | date:'shortDate'}}</p>
                 <p>Start of the 2016 Olympics: {{$ctrl.startDate | date:'fullDate'}}</p>
                 <p>Today's Date: {{$ctrl.today | date:'MMM d, y h:mm:ss a'}}</p>
             </pre>
@@ -63,8 +61,6 @@
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
-        $ctrl.firstFemaleAthletesDate = new Date('1900');
-        $ctrl.manyMedalsDate = new Date('08/08/2008');
         $ctrl.today = new Date();
         $ctrl.startDate = new Date("August 5, 2016");
     });
