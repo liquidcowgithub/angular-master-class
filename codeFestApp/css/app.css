@@ -1,0 +1,82 @@
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+}
+
+.footer {
+}
+
+.main {
+  text-align: left;
+}
+
+.aside-1 {
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto;
+  }
+}
+@media all and (min-width: 800px) {
+  .main {
+    flex: 5 0px;
+  }
+
+  .aside-1 {
+    order: 1;
+  }
+
+  .main {
+    order: 2;
+  }
+
+  .footer {
+    order: 3;
+  }
+}
+
+body {
+  background-color: #cbcbcb;
+}
+
+.fadeIn.ng-enter {
+    -moz-transition: 0.25s linear all;
+    -webkit-transition: 0.25s linear all;
+    -o-transition: 0.25s linear all;
+    transition: 0.25s linear all;
+    opacity: 0;
+}
+
+    /* The finishing CSS styles for the enter animation */
+    .fadeIn.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+.fadeIn.ng-leave {
+    -moz-transition: 0.01s linear all;
+    -webkit-transition: 0.01s linear all;
+    -o-transition: 0.01s linear all;
+    transition: 0.01s linear all;
+    opacity: 1;
+}
+
+    .fadeIn.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+.list-group-item {
+  outline: none;
+}

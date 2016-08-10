@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="codeFestApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeFest App by Entelect</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper" ng-controller="mainController">
+      <header class="header">Header</header>
+      <article class="main">
+        <div ng-include="currentView"></div>
+      </article>
+      <aside class="aside aside-1">
+        <div class="list-group">
+          <button type="button" class="list-group-item" ng-repeat="item in menuItems" ng-click="loadView(item.viewLink)">{{item.name}}</button>
+        </div>
+      </aside>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular/app/codeFestApp.js"></script>
+    <script src="js/angular/data/dataService.js"></script>
+    <script src="js/angular/controllers/mainController.js"></script>
+    <script src="js/angular/controllers/athletesController.js"></script>
+    <script src="js/angular/controllers/countriesController.js"></script>
+    <script src="js/angular/controllers/medalsController.js"></script>
+    <script src="js/angular/controllers/sportsController.js"></script>
+  </body>
+</html>
