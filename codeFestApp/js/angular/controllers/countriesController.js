@@ -1,3 +1,3 @@
-codeFestApp.controller("athletesController", ["$scope", function ($scope) {
+codeFestApp.controller("countriesController", ["$scope", function ($scope) {
 
 }]);
