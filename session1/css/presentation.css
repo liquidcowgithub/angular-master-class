@@ -154,8 +154,8 @@ color: #C86000;
   width: 400px;
     position: absolute;
     height: 461px;
-    left:-60px;
-    bottom: -185px;
+    left:20px;
+    bottom: 10px;
     z-index: 10;
 }
 
@@ -178,4 +178,8 @@ color: #C86000;
 
 pre h3 {
   font-size:35pt;
+}
+
+.slide-intro-backgroud{
+  background-color: white !important;
 }
