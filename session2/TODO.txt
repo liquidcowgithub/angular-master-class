@@ -7,3 +7,9 @@ Don't Reinvent the Wheel
     ui-bootstrap
     ui-router
     
+
+Saturday:
+    Fix Components example
+    Trim down the array filtering example
+    Check example font sizes
+    Check consistency in the web requests examples.
