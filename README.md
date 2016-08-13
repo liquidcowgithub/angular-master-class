@@ -9,7 +9,7 @@ To view the Session 1 slides, clone or download this repo, and open the session1
 * [ngClick Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-click-oc.html)
 * [ngIf Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-if-oc.html)
 * [ngShow Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-show-oc.html)
-* [ngRepeate Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-repeat-oc.html)
+* [ngRepeat Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-repeat-oc.html)
 * [ngOptions Example](https://github.com/liquidcowgithub/angular-master-class/blob/master/session1/built-in-directives-ng-options.html)
 
 ## Session 2
