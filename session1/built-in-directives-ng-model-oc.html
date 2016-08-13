@@ -53,12 +53,12 @@
     <div class="row">
       <div class="col-md-12">
           <h2><span class="just-highlight-blue">Outcome</span></h2>
-          <pre ng-controller="exampleController as $ctrl" ng-init="fastestMan='Yohan Blake'">
+          <pre ng-controller="exampleController as $ctrl">
             Fastest Man in the World:
 
-            <input ng-model="fastestMan">
+            <input ng-model="$ctrl.fastestMan">
 
-            <h3>{{fastestMan}}</h3> is the fastest man in the world!
+            <h3>{{$ctrl.fastestMan}}</h3> is the fastest man in the world!
           </pre>
       </div>
     </div>
@@ -67,6 +67,8 @@
     var exampleModule = angular.module('exampleModule',[]);
     exampleModule.controller('exampleController', function() {
         var $ctrl = this;
+
+        $ctrl.fastestMan = 'Yohan Blake'
     });
 </script>
 
