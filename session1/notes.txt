@@ -16,3 +16,6 @@ Angular can be a complete client slide solution
 
 matt -> opioninated
 darko -> kiss
+
+mature, stable
+
