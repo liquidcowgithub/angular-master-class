@@ -9,7 +9,7 @@ Don't Reinvent the Wheel
     
 
 Saturday:
-    Fix Components example
+    Fix Components example - done
     Trim down the array filtering example
     Check example font sizes
     Check consistency in the web requests examples.

@@ -32,7 +32,7 @@
  	    pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 20pt;
+            font-size: 14pt;
         }
         
         pre code {
@@ -50,14 +50,20 @@
             <pre>
                 <code>
 angular
-    .module('exampleModule')
+    .module('exampleModule', [])
+    .controller('exampleController', function(){
+        var $ctrl = this;
+        $ctrl.athletes = [{
+            name: 'Paavo Nurmi''
+        }, ...];
+    })
     .component('athleteList', {
-        template: '
-        &lt;ol&gt;&lt;li ng-repeat="athlete in $ctrl.athletes"&gt;
-                {{athlete.name}}&lt;/li&gt;&lt;/ol&gt;',
         bindings: {
             athletes: '='
-        }
+        },
+        template: '&lt;ol&gt;&lt;li ng-repeat=&quot;athlete in $ctrl.athletes&quot;&gt;
+                    {{athlete.name}}&lt;/li&gt;&lt;/ol&gt;'
+        
 });
                 </code>
             </pre>

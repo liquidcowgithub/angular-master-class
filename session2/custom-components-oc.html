@@ -48,7 +48,7 @@
         <div class="col-md-12">
             <h2>Outcome</h2>
             <pre ng-controller="exampleController as $ctrl">
-                <athletes-list athletes="[{name: 'bolt'}]"></athletes-list>
+                <athlete-list athletes="$ctrl.athletes"></athlete-list>
             </pre>
         </div>
     </div>
@@ -57,7 +57,23 @@
 
 <script type="text/javascript">
     angular
-    .module('exampleModule')
+    .module('exampleModule', [])
+    .controller('exampleController', function(){
+        var $ctrl = this;
+
+        $ctrl.athletes = [{
+            name: "Paavo Nurmi"
+        },
+        {
+            name: "Usain Bolt"
+        },
+        {
+            name: "Michael Phelps"
+        },
+        {
+            name: "Larisa Latynina"
+        }];
+    })
     .component('athleteList', {
         template: '<ol><li ng-repeat="athlete in $ctrl.athletes">{{athlete.name}}</li></ol>',
         bindings: {
