@@ -28,7 +28,7 @@ To view any of the session slides, clone or download this repo, and open the ses
 
 * [Numbers Filter](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/built-in-filters-numbers-oc.html)
 * [Date Filter](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/built-in-filters-date-oc.html)
-* [Array Filters](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/built-in-filters-ordering-piping-filtering.html)
+* [Array Filters](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/built-in-filters-ordering-piping-filtering-oc.html)
 * [Custom Components](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/custom-components-oc.html)
 * [Web Requests - Get](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/web-requests-http-GET-oc.html)
 * [Web Requests - Post](https://github.com/liquidcowgithub/angular-master-class/blob/master/session2/web-requests-http-POST-oc.html)
@@ -36,6 +36,6 @@ To view any of the session slides, clone or download this repo, and open the ses
 ### Resources
 
 * [Angular Project Structure Guide](http://mgechev.github.io/angularjs-style-guide)
-* [Angular Code Style Guide](github.com/johnpapa/angular-styleguide)
+* [Angular Code Style Guide](http://github.com/johnpapa/angular-styleguide)
 
 ## Session 3
