@@ -103,7 +103,7 @@ ul > li {
 }
 
 .highlight-point {
-  color: #FFD966;
+  color: #3E7C9B;
   font-size: 60pt;
 }
 
@@ -111,7 +111,7 @@ h1 .just-highlight {
   font-style: normal;
 }
 .just-highlight {
-  color: #FFD966;
+  color: #3E7C9B;
 }
 .just-highlight-blue {
   color: #cacaca;
@@ -173,7 +173,7 @@ color: #C86000;
 }
 
 .iframe-content h3 {
-  color:#FFD966;
+  color:#3E7C9B;
 }
 
 pre h3 {
