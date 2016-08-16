@@ -20,7 +20,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Web Requests: $http - GET</title>
+    <title>Custom Components</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -29,10 +29,10 @@
     <script src="http://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
-        pre {
+ 	    pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 19pt;
+            font-size: 14pt;
         }
         
         pre code {
@@ -42,27 +42,15 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">Project Structure</span></h1>
-    <br /><br />
+        <h1>Custom <span class="just-highlight">Components</span></h1>
+        <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2>Outcome</h2>
+            <h2>JavaScript - exampleModule.js</h2>
             <pre>
-exampleModule
-|   exampleModule.js
-|   exampleModule.css  
-|
-└───components
-|&nbsp;&nbsp;&nbsp;|   athleteList.js
-|
-└───templates
-|&nbsp;&nbsp;&nbsp;|   athleteList.html
-|&nbsp;&nbsp;&nbsp;|   index.html
-|
-└───tests
-&nbsp;&nbsp;&nbsp;&nbsp;|   athleteList.spec.js
-
-
+                <code>
+angular.module('exampleModule', []);
+                </code>
             </pre>
         </div>
     </div>
