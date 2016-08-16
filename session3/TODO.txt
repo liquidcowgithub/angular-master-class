@@ -6,3 +6,6 @@ Don't reinvent the wheel
 Running in production
 build tools & packaging
 
+web optimisation
+
+minification safe angular dependency injection

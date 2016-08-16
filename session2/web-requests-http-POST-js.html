@@ -55,7 +55,7 @@ $ctrl.postNewSupplier = postNewSupplier;
 
 getSuppliers();
 
- function postNewSupplier(){
+function postNewSupplier(){
     $http.post('http://my.server.net/api/suppliers', $ctrl.newSupplier)
             .then(getSuppliers);
 }
