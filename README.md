@@ -39,3 +39,5 @@ To view any of the session slides, clone or download this repo, and open the ses
 * [Angular Code Style Guide](http://github.com/johnpapa/angular-styleguide)
 
 ## Session 3
+
+Coming soon
