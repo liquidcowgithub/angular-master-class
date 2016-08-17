@@ -34,7 +34,7 @@
             background-color: #f8f8f8;
             font-size: 15pt;
         }
-        
+
         pre code {
             background-color: transparent;
         }
@@ -52,7 +52,6 @@
 var $ctrl = this;
 $ctrl.newSupplier = {};
 $ctrl.postNewSupplier = postNewSupplier;
-
 getSuppliers();
 
 function postNewSupplier(){
@@ -63,8 +62,7 @@ function postNewSupplier(){
 function getSuppliers(){
     $http.get('http://my.server.net/api/suppliers')
             .then(function(response){
-                $ctrl.suppliers = response.data;
-            });
+                $ctrl.suppliers = response.data;});
 }
                 </code>
             </pre>

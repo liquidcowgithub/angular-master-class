@@ -32,6 +32,7 @@
     pre {
         white-space: pre-line;
         background-color: #f8f8f8;
+        font-size: 15pt;
     }
 
     pre code {
@@ -55,7 +56,8 @@
         &lt;th ng-click=&quot;$ctrl.orderTableBy('goldMedals');&quot;&gt;Gold Medals&lt;/th&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
-        &lt;tr ng-repeat=&quot;athlete in $ctrl.athletes | orderBy:$ctrl.column:$ctrl.reverse&quot;&gt;
+        &lt;tr ng-repeat=&quot;athlete in $ctrl.athletes
+                      | orderBy:$ctrl.column:$ctrl.reverse&quot;&gt;
             &lt;td&gt;{{athlete.name}}&lt;/td&gt;
             &lt;td&gt;{{athlete.country}}&lt;/td&gt;
             &lt;td&gt;{{athlete.goldMedals}}&lt;/td&gt;
