@@ -57,11 +57,11 @@
           <pre>
             <form name="myForm">
             <label>
-              Enter text:
+              Enter Email Address:
               <input type="email" ng-model="field" name="myField" required />
             </label>
             <div ng-messages="myForm.myField.$error" role="alert" ng-if="myForm.myField.$dirty" class="text-danger">
-              <div ng-message="required">Please enter a value for this field.</div>
+              <div ng-message="required">Please enter an email address.</div>
               <div ng-message="email">This field must be a valid email address.</div>
             </div>
             </form>
