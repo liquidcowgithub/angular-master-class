@@ -12,7 +12,7 @@
 
 <body>
   <div id="impress">
-    <div id="1" class="step intro-slide">
+    <div id="1" class="step intro-slide slide-intro-backgroud">
       <img src="img/e-logo.png" class="logo" />
       <div class="col-md-10 col-md-offset-2">
         <ul>
@@ -76,7 +76,61 @@
       <iframe src="project-structure-2.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
     <div class="step centered">
-      <h1>Dependency <span class="just-highlight">Injection</span></h1>
+      <h1>Form <span class="just-highlight">Validation</span></h1>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">ngMessages</span></h1>
+      <h3 style="text-align:left !important">Designed to <span class="just-highlight">show and hide messages</span> based on the state of a key/value object that
+        it listens on.</h3>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">ngMessages</span></h1>
+      <h3 style="text-align:left !important">A common use case for ngMessages is to display error messages for inputs using the <span class="just-highlight">$error</span>        object exposed by the <span class="just-highlight">ngModel</span> directive.</h3>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-js.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-html-2.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-oc.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">ngMessages</span></h1>
+      <h3>Multiple Messages</h3>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-multiple-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">ngMessages</span></h1>
+      <h3>Reusable Templates</h3>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-template-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="ng-messages-template-2-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">One-Way</span> Binding</h1>
+    </div>
+    <div class="step centered">
+      <h1><span class="just-highlight">One-Way</span> Binding</h1>
+      <h3>{{<span class="just-highlight">::</span>thing}}</h3>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="one-way-binding-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="one-way-binding-js.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step iframe-step">
+      <iframe src="one-way-binding-oc.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
     <div class="step centered">
       <h1>SPA <span class="just-highlight">Routing</span></h1>
@@ -94,6 +148,9 @@
     </div>
     <div class="step iframe-step">
       <iframe src="ui-router-oc.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div class="step centered">
+      <h1>Form <span class="just-highlight">Animation</span></h1>
     </div>
     <div class="step centered">
       <h1>AngularJS in <span class="just-highlight">Production</span></h1>
@@ -133,27 +190,11 @@
       <h3>angular-cli - <span class="just-highlight">New for Angular 2</h3>
     </div>
     <div class="step centered">
-      <h1><span class="just-highlight">One-Way</span> Binding</h1>
-    </div>
-    <div class="step centered">
-      <h1><span class="just-highlight">One-Way</span> Binding</h1>
-      <h3>{{<span class="just-highlight">::</span>thing}}</h3>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="one-way-binding-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="one-way-binding-js.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="one-way-binding-oc.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step centered">
       <h1><span class="just-highlight">Premature Optimization</span></h1>
       <h3>Root of all <span class="just-highlight">evil.</span></h3>
     </div>
     <div class="step centered">
-      <h1>Reinventing the Wheel</h1>
+      <h1><span class="just-highlight">Reinventing</span> the Wheel</h1>
     </div>
     <div class="step centered">
       <h1><span class="just-highlight">Don't</span></h1>
@@ -171,50 +212,6 @@
       <h3>docs.angularjs.org/guide/production</h3>
       <h3><span class="just-highlight">Slides</span></h3>
       <h3>github.com/liquidcowgithub/angular-master-class</h3>
-    </div>
-    <div class="step centered">
-      <h1>Form <span class="just-highlight">Validation</span></h1>
-    </div>
-    <div class="step centered">
-      <h1><span class="just-highlight">ngMessages</span></h1>
-      <h3 style="text-align:left !important">Designed to <span class="just-highlight">show and hide messages</span> based on the state of a key/value object that it listens on.</h3>
-    </div>
-    <div class="step centered">
-      <h1><span class="just-highlight">ngMessages</span></h1>
-      <h3 style="text-align:left !important">A common use case for ngMessages is to display error messages for inputs using the <span class="just-highlight">$error</span> object exposed
-        by the <span class="just-highlight">ngModel</span> directive.</h3>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-js.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-html-2.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-oc.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step centered">
-      <h1><span class="just-highlight">ngMessages</span></h1>
-      <h3>Multiple Messages</h3>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-multiple-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step centered">
-      <h1><span class="just-highlight">ngMessages</span></h1>
-      <h3>Reusable Templates</h3>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-template-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step iframe-step">
-      <iframe src="ng-messages-template-2-html.html" height="800" width="1000" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-    </div>
-    <div class="step centered">
-      <h1>Form <span class="just-highlight">Animation</span></h1>
     </div>
   </div>
   <script src="js/jquery-1.9.1.min.js"></script>
