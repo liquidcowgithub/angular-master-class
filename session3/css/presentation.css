@@ -56,6 +56,10 @@ body {
   padding: 0;
 }
 
+.profile-pic{
+  padding-top: 6vh;
+}
+
 h1 {
     font-size: 90pt;
     color: #fff;
@@ -99,7 +103,7 @@ ul > li {
 }
 
 .highlight-point {
-  color: #FFD966;
+  color: #3E7C9B;
   font-size: 60pt;
 }
 
@@ -107,8 +111,7 @@ h1 .just-highlight {
   font-style: normal;
 }
 .just-highlight {
-  color: #FFD966;
-  font-style: italic;
+  color: #3E7C9B;
 }
 .just-highlight-blue {
   color: #cacaca;
@@ -151,8 +154,8 @@ color: #C86000;
   width: 400px;
     position: absolute;
     height: 461px;
-    left:-60px;
-    bottom: -185px;
+    left:20px;
+    bottom: 10px;
     z-index: 10;
 }
 
@@ -170,5 +173,13 @@ color: #C86000;
 }
 
 .iframe-content h3 {
-  color:#FFD966;
+  color:#3E7C9B;
+}
+
+pre h3 {
+  font-size:35pt;
+}
+
+.slide-intro-backgroud{
+  background-color: white !important;
 }
