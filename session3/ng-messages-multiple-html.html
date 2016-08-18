@@ -61,9 +61,9 @@
 &lt;form name=&quot;myForm&quot;&gt;
   &lt;input type=&quot;email&quot; ng-model=&quot;field&quot; name=&quot;myField&quot; required maxlength=&quot;15&quot; /&gt;
 
-  &lt;div ng-messages=&quot;myForm.myField.$error&quot; role=&quot;alert&quot;&gt;
-    &lt;div ng-message=&quot;required&quot;&gt;Value required.&lt;/div&gt;
-    &lt;div ng-message=&quot;email&quot;&gt;Valid email required.&lt;/div&gt;
+  &lt;div ng-messages=&quot;myForm.myField.$error&quot; role=&quot;alert&quot; ng-messages-multiple&gt;
+    &lt;div ng-message=&quot;required&quot; multiple&gt;Value required.&lt;/div&gt;
+    &lt;div ng-message=&quot;email&quot; multiple&gt;Valid email required.&lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
                 </code>
