@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--
 
@@ -20,7 +19,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Built-In Directives: Strict Dependency Injection</title>
+    <title>Debug Mode</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,11 +31,11 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 19pt;
+            font-size: 18pt;
             padding-top: 0px !important;
             padding-bottom: 0px !important;
         }
-        
+
         pre code {
             background-color: transparent;
         }
@@ -49,20 +48,20 @@
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">Strict Dependency Injection</span></h1>
+    <h1><span class="just-highlight">Comment Evaluation</span></h1>
     <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2><span class="just-highlight-blue">HTML</span></h2>
-            <div ng-non-bindable="">
-                <pre>
-                    <code>
-&lt;body ng-app="myRootModule" ng-strict-di&gt;
-
-&lt;/body&gt;
+            <h2><span class="just-highlight-blue">JavaScript</span></h2>
+            <pre>
+                <code>
+angular
+    .module('myRootModule', [])
+    .config(function($compileProvider) {
+        $compileProvider.commentDirectivesEnabled(false);
+    });
                 </code>
-                </pre>
-            </div>
+            </pre>
         </div>
     </div>
 </body>
