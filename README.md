@@ -51,6 +51,6 @@ To view any of the session slides, clone or download this repo, and open the ses
 
 ### Resources
 
-* [Angular in Production](docs.angularjs.org/guide/production)
+* [Angular in Production](https://docs.angularjs.org/guide/production)
 * [Angular Project Structure Guide](http://mgechev.github.io/angularjs-style-guide)
-* [Full Spectrum AngularJS Testing](yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
+* [Full Spectrum AngularJS Testing](http://yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
