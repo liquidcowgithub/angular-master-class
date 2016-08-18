@@ -1,11 +1,4 @@
-Last Time
-
 Animations
-Direct DOM manipulation
-Don't reinvent the wheel
-Running in production
-build tools & packaging
-
-web optimisation
-
 minification safe angular dependency injection
+$q
+Debug info gif
