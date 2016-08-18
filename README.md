@@ -35,9 +35,22 @@ To view any of the session slides, clone or download this repo, and open the ses
 
 ### Resources
 
-* [Angular Project Structure Guide](http://mgechev.github.io/angularjs-style-guide)
+
 * [Angular Code Style Guide](http://github.com/johnpapa/angular-styleguide)
+* [Entelect Frontend Framework Showcases](https://github.com/mikestichling/frontend-framework-showcases)
 
 ## Session 3
 
-Coming soon
+### Examples
+
+* [Disabling Debug Mode](https://github.com/liquidcowgithub/angular-master-class/blob/master/session3/debug-mode-js.html)
+* [Disabling Comment Evaluation](https://github.com/liquidcowgithub/angular-master-class/blob/master/session3/comment-evaluation-js.html)
+* [Strict Dependency Injection Mode](https://github.com/liquidcowgithub/angular-master-class/blob/master/session3/strict-di-mode.html)
+* [ui-router](https://github.com/liquidcowgithub/angular-master-class/blob/master/session3/ui-router-oc.html)
+* [ngMessages](https://github.com/liquidcowgithub/angular-master-class/blob/master/session3/ng-messages-oc.html)
+
+### Resources
+
+* [Angular in Production](https://docs.angularjs.org/guide/production)
+* [Angular Project Structure Guide](http://mgechev.github.io/angularjs-style-guide)
+* [Full Spectrum AngularJS Testing](http://yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html)
