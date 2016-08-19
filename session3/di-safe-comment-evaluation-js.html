@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--
 
@@ -20,7 +19,7 @@
 
     -->
     <meta charset="utf-8">
-    <title>Web Requests: $http - GET</title>
+    <title>Safe Dependency Injection</title>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/9.5.0/styles/github.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/presentation.css" />
@@ -32,40 +31,46 @@
         pre {
             white-space: pre-line;
             background-color: #f8f8f8;
-            font-size: 19pt;
+            font-size: 18pt;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
         }
-        
+
         pre code {
             background-color: transparent;
+        }
+
+        code {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
         }
     </style>
 </head>
 
 <body class="container iframe-content" ng-app="exampleModule">
-    <h1><span class="just-highlight">Project Structure</span></h1>
+    <h1><span class="just-highlight">Safe Dependency Injection</span></h1>
     <br /><br />
     <div class="row">
         <div class="col-md-12">
-            <h2>Outcome</h2>
+            <h2><span class="just-highlight-blue">JavaScript</span></h2>
             <pre>
-homePageModule
-|   homePageModule.js
-|   homePageModule.css  
-└───components
-└───controllers
-└───templates
-└───tests
-└───loginModule
-&nbsp;&nbsp;&nbsp;&nbsp;|   loginModule.js
-&nbsp;&nbsp;&nbsp;&nbsp;|   loginModule.css  
-&nbsp;&nbsp;&nbsp;&nbsp;|
-&nbsp;&nbsp;&nbsp;&nbsp;└───components
-&nbsp;&nbsp;&nbsp;&nbsp;└───templates
-&nbsp;&nbsp;&nbsp;&nbsp;└───tests
+                <code>
+angular
+    .module('myRootModule', [])
+    .config(['$compileProvider', function($compileProvider) {
+        $compileProvider.commentDirectivesEnabled(false);
+    }]);
+                </code>
             </pre>
         </div>
     </div>
 </body>
+<script type="text/javascript">
+    var exampleModule = angular.module('exampleModule',[]);
+    exampleModule.controller('exampleController', function() {
+        var $ctrl = this;
+    });
+</script>
 
 <!--
 This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
@@ -78,6 +83,8 @@ This is just the highlighting init. Ignore this.   ┐( ˘_˘)┌
   });
 });
 </script>
+
+
 
 
 </html>
